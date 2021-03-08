@@ -5,11 +5,15 @@
 
 // Write a macro that passes the quiz! No hints this time, you can do it!
 
-// I AM NOT DONE
-
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    macro_rules! my_macro {
+    ($val:expr) => {
+            "Hello ".to_owned() + $val
+        }
+    }
 
     #[test]
     fn test_my_macro_world() {
